@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>BikeThere</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='shortcut icon' href='Your favicon path goes here' type='image/x-icon'>
+  <!-- Mapbox GL-JS JS -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+  <!-- Mapbox GL-JS CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Mapbox Assembly -->
+  <link href='https://api.mapbox.com/mapbox-assembly/v0.21.0/assembly.min.css' rel='stylesheet'>
+  <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.21.0/assembly.js"></script>
+  <link href='https://api.mapbox.com/mapbox-assembly/mapbox-addon/v0.3.0/assembly.min.css' rel='stylesheet'>
+  <script src='https://api.mapbox.com/mapbox-assembly/mapbox-addon/v0.3.0/assembly.js'></script>
+  <!-- Custom styles -->
+  <link href='main.css' rel='stylesheet' type="text/css" />
+</head>
+
+<body>
+  <div class='viewport-full relative clip'>
+
+    <div class='viewport-twothirds viewport-full-ml relative'>
+      <div id='map' class='absolute top left right bottom'></div>
+    </div>
+
+    <div class='absolute top-ml left bottom z1 w-full w300-ml p12-ml'>
+      <div class='viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken5 scroll-auto'>
+        <div class='p12 scroll-auto'>
+          <h3 class='txt-m txt-bold mb6'>BikeThere</h3>
+          <p>Want to find out where you can bike in the next 15 minutes? How about if you had an hour?</p>
+          <br>
+          <p>
+            This example shows how to combine Mapbox's maps with the Isochrone API. Drag the marker around
+            the map to see conditions from different origin locations.
+          </p>
+          <br>
+
+          <div class=''>
+            <span class='txt-l'>Total area that's reachable from this point, within a </span>
+            <div class='select-container'>
+              <select id='timelimit' class='select select--s select--stroke pt3 pb3'>
+                <option selected value='10'>10-minute</option>
+                <option value='20'>20-minute</option>
+                <option value='30'>30-minute</option>
+              </select>
+              <div class='select-arrow'></div>
+            </div>
+            <span class='txt-l'>bike ride.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src='./index.js' type="text/javascript"></script>
+</body>
+
+</html>
